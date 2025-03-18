@@ -32,8 +32,17 @@ vi .env
 GOOGLE_API_KEY=your_google_api_key_here
 ANTHROPIC_API_KEY=your_anthropic_api_key_here
 
-# Install dependencies
+# Run API
 fastapi dev main.py
+
+# Run all tests
+pytest
+
+# Run tests with coverage report
+pytest --cov=functions --cov=main --cov-report=term-missing
+
+# Run specific test file
+pytest tests/test_api.py
 ```
 
 **Enjoy :)**
